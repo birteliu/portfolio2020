@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap");
+body {
+  font-family: "Maven Pro", "Noto Sans TC",sans-serif;
+}
+
+.header-menu a {
+  color: #333333;
+}
+
+.header-menu a:hover {
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #7d8b3f;
+}
+
+.header-menu a.active {
+  color: #9DAE4F;
+  font-weight: bold;
+}
+
+.header-menu a.active:after {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #9DAE4F;
+  margin: auto;
+}
+
+.projects figure.snip1321 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-perspective: 50em;
+          perspective: 50em;
+}
+
+.projects figure.snip1321 * {
+  -webkit-box-sizing: padding-box;
+          box-sizing: padding-box;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.projects figure.snip1321 img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+.projects figure.snip1321 figcaption {
+  top: 50%;
+  left: 20px;
+  right: 20px;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+.projects figure.snip1321:after {
+  background-color: #ffffff;
+  position: absolute;
+  content: "";
+  display: block;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  opacity: 0;
+}
+
+.projects figure.snip1321 a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.projects figure.snip1321:hover figcaption, .projects figure.snip1321.hover figcaption {
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 1;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.projects figure.snip1321:hover:after, .projects figure.snip1321.hover:after {
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  opacity: 0.9;
+}
+
+.projects figcaption span {
+  background-color: #9DAE4F;
+  padding: .15rem 1rem;
+  color: #fff;
+  border-radius: 50px;
+}
+
+footer {
+  color: #4d4d4d;
+}
+
+footer a {
+  color: #4d4d4d;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+footer a:hover {
+  color: #7d8b3f;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+/*# sourceMappingURL=main.css.map */

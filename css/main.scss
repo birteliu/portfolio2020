@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+// mixin
+@mixin ab_center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 主色系變數
+$main-color01: #9DAE4F;
+$main-color01-light: #EEF8FF;
+$main-color01-dark: #0078AF;
+$text-color: #333333;
+$main-color02: #e2673b;
+$main-color03: #FFAA1C;
+
+// 共用
+body {
+    font-family: "Maven Pro", "Noto Sans TC",sans-serif;
+}
+
+//
+.header-menu {
+    a {
+        color: $text-color;
+        &:hover {
+            text-decoration: none;
+            transition: .3s;
+            color: darken($main-color01, 10%);
+        }
+        &.active {
+            color: $main-color01;
+            font-weight: bold;
+            &:after {
+                display: block;
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 10px;
+                background-color: $main-color01;
+                margin: auto;
+            }
+        }
+    }
+}
+.projects {
+    figure.snip1321 {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        perspective: 50em;
+    }
+    figure.snip1321 * {
+        box-sizing: padding-box;
+        transition: all 0.2s ease-out;
+    }
+    figure.snip1321 img {
+        max-width: 100%;
+        vertical-align: top;
+    }
+    figure.snip1321 figcaption {
+        top: 50%;
+        left: 20px;
+        right: 20px;
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
+    }
+    figure.snip1321:after {
+        background-color: #ffffff;
+        position: absolute;
+        content: "";
+        display: block;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        transition: all 0.4s ease-in-out;
+        //transform: rotateX(-90deg);
+        transform-origin: 50% 50%;
+        opacity: 0;
+    }
+    figure.snip1321 a {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+    }
+    figure.snip1321:hover figcaption, figure.snip1321.hover figcaption {
+        transform: translateY(-50%);
+        opacity: 1;
+        transition-delay: 0.2s;
+    }
+    figure.snip1321:hover:after, figure.snip1321.hover:after {
+        transform: rotateX(0);
+        opacity: 0.9;
+    }
+    figcaption span {
+        background-color: $main-color01;
+        padding: .15rem 1rem;
+        color: #fff;
+        border-radius: 50px;
+    }
+}
+
+footer {
+    color: lighten($text-color, 10%);
+    a {
+        color: lighten($text-color, 10%);
+        font-size: 2rem;
+        line-height: 2rem;
+        &:hover {
+            color: darken($main-color01, 10%);
+            transition: .3s;
+        }
+    }
+}
